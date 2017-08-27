@@ -1,0 +1,42 @@
+#team {
+    background: $bg-team;
+    color: #3c4761;
+    text-align: center;
+    
+    .container {
+        padding: 100px 20px;
+    }
+    
+    .team-upper {
+        
+        margin-bottom: 60px;
+        
+    }
+    
+    .team-lower {
+        
+        overflow: hidden;
+        
+        img.profile {
+            width: 85%;
+            margin-bottom: 30px;
+        }
+        
+        h4 {
+            color: #30bae7;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        
+        .col-4-team {
+            float: left;
+            width: 25%;
+            padding: 10px 20px;
+        }
+        
+    }
+    
+}
