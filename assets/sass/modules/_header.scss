@@ -1,0 +1,58 @@
+#header {
+    background: $bg-header;
+    
+    
+    .header-upper {
+        margin-bottom: 130px;
+    }
+    
+    .logo {
+        float: left;
+    }
+    .nav {
+        float: right;
+        
+        ul {
+            float: left;
+        }
+        
+        ul li {
+            display: inline-block;
+            margin-right: 25px;
+            font-size: 16px;
+        }
+        
+        ul li a {
+            text-transform: uppercase;
+            color: white;
+            padding: 5px 10px;
+            transition: all .3s;
+        }
+        
+        ul li a:hover {
+            background: #643a79;
+            border-radius: 10%;
+            
+        }
+    }
+    
+    .header-lower {
+        display: inline-block;
+        text-align: center;
+        padding: 0 60px;
+        margin-bottom: 80px;
+        
+        h1 {
+           line-height: 50px; 
+           margin-bottom: 80px;
+        }
+        
+        a {
+            background: $btn-first;
+            color: white;
+            padding: 15px 60px;
+            border-radius: 2%;
+            text-transform: uppercase;
+        }
+    }
+}
