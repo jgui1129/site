@@ -1,0 +1,33 @@
+footer {
+    background: #344b8e;
+    margin: 0;
+    padding: 50px;
+    text-align: center;
+    
+    @include extraSmall {
+        padding: 20px 10px;
+        padding-bottom: 60px;
+    }
+
+    ul li {
+        display: inline-block;
+        margin-bottom: 5px;
+        
+        @include extraSmall {
+            float: left;
+            
+        }
+        
+    }
+    ul li a {
+        color: white;
+        margin-left: 30px;
+        transition: .1s;
+        
+        
+    }
+    
+    ul li a:hover {
+        color: #31a2d4;
+    }
+}

@@ -5,26 +5,42 @@
     
     .container {
         padding: 100px 20px;
+        
+        @include extraSmall {
+            padding: 60px 20px;
+            padding-bottom: 80px;
+        }
     }
     
     .portfolio-upper {
         margin-bottom: 30px;
         
+        @include small {
+            margin-bottom: 40px;
+        }
+        
         p {
             padding: 0 250px;
+            
+            @include small {
+                padding: 0 40px;
+            }
+            @include extraSmall {
+                padding: 0 20px;
+            }
         }
     }
     
     .portfolio-lower {
         
-        
         .portfolio-tabs {
             
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             
             ul li {
                 display: inline-block;
                 margin-left: 10px;
+                margin-bottom: 30px;
             }
             
             ul li a {
@@ -34,6 +50,9 @@
                 color: black;
                 vertical-align: middle;
                 border-radius: 3px;
+            }
+            ul li a:hover {
+                background: darken(#ebc985, 5%);
             }
             
         }
@@ -46,8 +65,32 @@
             width: 50%;
             padding: 30px;
             
+            @include medium {
+                float: none;
+                display: inline-block;
+                width: 45%;
+            }
+            
+            
+            @include small {
+                float: none;
+                width: 100%;
+            }
+            
             img {
                 width: 100%;
+                transition: .2s;
+                
+                @include small {
+                    width: 70%;
+                }
+                
+                @include extraSmall {
+                    width: 80%;
+                }
+            }
+            img:hover {
+                transform: scale(1.1);
             }
         }
         
@@ -64,6 +107,9 @@
             background: $btn-second;
             text-transform: uppercase;
             padding: 20px 40px;
+        }
+        .portfolio-btn a:hover {
+            background: darken($btn-second,5%);
         }
         
     }

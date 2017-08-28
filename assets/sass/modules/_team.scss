@@ -5,11 +5,19 @@
     
     .container {
         padding: 100px 20px;
+        
+        @include extraSmall {
+            padding: 60px 20px;
+        }
     }
     
     .team-upper {
         
         margin-bottom: 60px;
+        
+        @include extraSmall {
+            margin-bottom: 50px;
+        }
         
     }
     
@@ -20,6 +28,19 @@
         img.profile {
             width: 85%;
             margin-bottom: 30px;
+            transition: .5s;
+            
+            @include small {
+                width: 50%;
+            }
+            
+            @include extraSmall {
+                width: 60%;
+            }
+        }
+        
+        img.profile:hover {
+            transform: scale(1.1);
         }
         
         h4 {
@@ -35,8 +56,26 @@
             float: left;
             width: 25%;
             padding: 10px 20px;
+            
+            @include small {
+                width: 50%;
+                padding-bottom: 30px;
+            }
+            
+            @include extraSmall {
+                float: none;
+                width: 100%;
+                margin-bottom: 20px;
+            }
         }
         
+        .social img {
+            transition: all .3s;
+            
+        }
+        .social img:hover {
+            transform: rotate(-15deg);
+        }
     }
     
 }

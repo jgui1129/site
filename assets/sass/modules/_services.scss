@@ -5,6 +5,12 @@
     
     .container {
         padding: 100px 20px;
+        
+        
+        @include extraSmall {
+            padding: 60px 20px;
+        }
+        
     }
    
     
@@ -12,8 +18,20 @@
         margin-bottom: 80px;
         display: inline-block;
         
+        @include extraSmall {
+            display: block;
+        }
+        
         p {
             padding: 0 220px;
+            
+            @include small {
+                padding: 0 100px;
+            }
+            
+            @include extraSmall {
+                padding: 0 30px;
+            }
         }
         
     }
@@ -25,11 +43,32 @@
             float: left;
             width: 25%;
             padding: 0 25px;
+            
+            @include small {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+            
+            @include extraSmall {
+                float: none;
+                width: 100%;
+                margin-bottom: 30px;
+            }
         }
         
         img {
             text-align: center;
             margin-bottom: 50px;
+            padding: 20px;
+            transition: .2s;
+            
+            @include extraSmall {
+                margin-bottom: 30px;
+            }
+        }
+        
+        img:hover {
+            transform: rotate(-35deg);
         }
         
         h3 {

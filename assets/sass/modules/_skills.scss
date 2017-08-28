@@ -5,28 +5,70 @@
     
     .container {
         padding: 100px 20px;
+        
+        @include extraSmall {
+            padding: 60px 20px;
+        }
     }
     
     .skills-upper {
         margin-bottom: 60px;
         
+        @include extraSmall {
+            margin-bottom: 30px;
+        }
+        
         p {
             padding: 0 250px;
+            
+            @include small {
+                padding: 0 80px;
+            }
+            
+            @include extraSmall {
+                padding: 0 10px;
+            }
         }
     }
     
     .skills-lower {
         
         overflow: hidden;
+        margin-bottom: -30px;
         
         .col-4-skills {
             float: left;
             width: 25%;
+            padding: 20px;
+            
+            @include small {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+            
+            @include extraSmall {
+                float: none;
+                width: 100%;
+                margin-bottom: 30px;
+                border-bottom: 2px dashed lighten(#3c4761,5%);
+                
+            }
         }
         
         strong {
             font-size: 100px;
+            transition: .1s;
+            
+            @include medium {
+                font-size: 90px;
+            }
+            
         }
+        
+//        strong:hover {
+//            color: darken($bg-portfolio,30%);
+//            
+//        }
         
         h3 {
             margin-top: 20px;
